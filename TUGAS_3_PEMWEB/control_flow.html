@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perhitungan Nilai Mahasiswa</title>
+    <script>
+        function hitungNilai() {
+            // Ambil nilai input dari form
+            let presensi = parseFloat(document.getElementById("presensi").value) || 0;
+            let tugas = parseFloat(document.getElementById("tugas").value) || 0;
+            let uts = parseFloat(document.getElementById("uts").value) || 0;
+            let uas = parseFloat(document.getElementById("uas").value) || 0;
+
+            // Hitung nilai akhir berdasarkan komposisi yang diberikan
+            let nilaiAkhir = (presensi * 0.10) + (tugas * 0.20) + (uts * 0.30) + (uas * 0.40);
+            
+            // Tentukan huruf mutu berdasarkan nilai akhir
+            let hurufMutu;
+            if (nilaiAkhir > 80) {
+                hurufMutu = "A";
+            } else if (nilaiAkhir > 75) {
+                hurufMutu = "B+";
+            } else if (nilaiAkhir > 70) {
+                hurufMutu = "B";
+            } else if (nilaiAkhir > 65) {
+                hurufMutu = "B-";
+            } else if (nilaiAkhir > 60) {
+                hurufMutu = "C+";
+            } else if (nilaiAkhir > 55) {
+                hurufMutu = "C";
+            } else if (nilaiAkhir > 50) {
+                hurufMutu = "C-";
+            } else if (nilaiAkhir > 30) {
+                hurufMutu = "D";
+            } else {
+                hurufMutu = "E";
+            }
+
+            // Tampilkan hasil
+            document.getElementById("hasil").innerHTML = `
+                Nilai Akhir: ${nilaiAkhir.toFixed(2)} <br>
+                Huruf Mutu: ${hurufMutu}
+            `;
+        }
+    </script>
+</head>
+<body>
+    <h1>Perhitungan Nilai Mahasiswa</h1>
+    <form>
+        <label for="presensi">Presensi Kehadiran (0-100):</label>
+        <input type="number" id="presensi" min="0" max="100" value="0"><br><br>
+
+        <label for="tugas">Nilai Tugas (0-100):</label>
+        <input type="number" id="tugas" min="0" max="100" value="0"><br><br>
+
+        <label for="uts">Nilai UTS (0-100):</label>
+        <input type="number" id="uts" min="0" max="100" value="0"><br><br>
+
+        <label for="uas">Nilai UAS (0-100):</label>
+        <input type="number" id="uas" min="0" max="100" value="0"><br><br>
+
+        <button type="button" onclick="hitungNilai()">Hitung</button>
+    </form>
+
+    <h2>Hasil Perhitungan:</h2>
+    <div id="hasil">
+        Nilai Akhir: 0.00 <br>
+        Huruf Mutu: E
+    </div>
+</body>
+</html>

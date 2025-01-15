@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hubungi Kami</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">klug</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Tentang Kami</a>
+            <a href="#">Layanan Kami</a>
+            <a href="#">Artikel</a>
+            <a href="#">Hubungi Kami</a>
+        </nav>
+        <div class="actions">
+            <input type="text" class="search-bar" placeholder="Cari...">
+            <button class="online-register">Daftar Online</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="contact-banner">
+            <div class="contact-text">
+                <h1>Hubungi Kami</h1>
+            </div>
+        </section>
+
+        <section class="form-section">
+            <h2>Kirim Pesan</h2>
+            <form action="pesan_hubungi.php" method="POST">
+                <div class="form-group">
+                    <input type="text" name="nama" placeholder="Nama*" required>
+                    <input type="email" name="email" placeholder="E-Mail*" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="perusahaan" placeholder="Perusahaan / Organisasi">
+                    <input type="text" name="telepon" placeholder="Telepon">
+                </div>
+                <textarea name="pesan" placeholder="Isi Pesan*" required></textarea>
+                <div class="captcha-submit">
+                    <div class="g-recaptcha" data-sitekey="6LeAprgqAAAAAHJGL5Cta8TtV5sYGW8kWX9141Qc"></div>
+                    <button type="submit">Kirim Pesan</button>
+                </div>
+            </form>
+        </section>
+
+        <hr class="divider">
+
+        <section class="location-section">
+            <h2>Lokasi Kami</h2>
+            <div class="location">
+                <h3>Kantor Pusat</h3>
+                <p>Gedung Ir. H. M. Suseno - Jl. R.P Soeroso No.6, Menteng, Jakarta Pusat</p>
+                <p>Phone: (+62 21) 398 38706 - Fax: (+62 21) 316 1701</p>
+                <p>Hotline: +6281519404071 / +62811998167</p>
+            </div>
+            <div class="location">
+                <h3>Kantor Cabang</h3>
+                <p>Gedung Ir. H. M. Suseno - Jl. R.P Soeroso No.6, Menteng, Jakarta Pusat</p>
+                <p>Phone: (+62 21) 398 38706 - Fax: (+62 21) 316 1701</p>
+                <p>Hotline: +6281519404071 / +62811998167</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright &copy; 2020 - Inaklug Indonesia | Hak cipta dilindungi undang-undang</p>
+    </footer>
+</body>
+</html>

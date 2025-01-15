@@ -1,0 +1,171 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(to right, #46074E, #197BD0);
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header nav a {
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+header .actions {
+    display: flex;
+    align-items: center;
+}
+
+header .search-bar {
+    padding: 5px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+header .online-register {
+    background: #195395; /* Warna tombol */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px; /* Membulatkan ujung tombol */
+    cursor: pointer;
+    font-size: 16px;
+}
+
+header .online-register:hover {
+    background: #163a6b; /* Warna saat hover */
+}
+    
+
+/* Contact Banner */
+.contact-banner {
+    background-image: url('Foto1.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 600px; /* Tinggi lebih kecil */
+    width: 100%;
+    position: relative;
+}
+
+.contact-banner .contact-text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    font-size: 2rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+/* Form Section */
+.form-section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.form-section h2 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.form-section form {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.form-group {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.form-group input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    resize: none;
+    height: 120px;
+}
+
+.captcha-submit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.captcha label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+button {
+    background: #197BD0;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #165a9c; /* Hover effect untuk tombol umum */
+}
+
+/* Divider */
+.divider {
+    border: none;
+    height: 1px;
+    background: #ccc;
+    margin: 40px 0;
+}
+
+/* Location Section */
+.location-section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.location-section h2 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.location {
+    margin-bottom: 20px;
+}
+
+footer {
+    background: linear-gradient(to right, #46074E, #197BD0);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
